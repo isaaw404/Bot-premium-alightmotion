@@ -9,7 +9,8 @@ const {
   startSendlinkFlow,
   processEmail,
   processLink,
-  handleCancel
+  handleCancel,
+  handleWlid
 } = require('./handlers/commands');
 const { registerActions } = require('./handlers/actions');
 
@@ -37,6 +38,7 @@ bot.use((ctx, next) => {
 bot.start((ctx) => handleStart(ctx));
 bot.help((ctx) => handleHelp(ctx));
 bot.command('status', (ctx) => handleStatus(ctx));
+bot.command('wlid', (ctx) => handleWlid(ctx));
 
 registerActions(bot);
 
@@ -64,10 +66,11 @@ bot.on('text', async (ctx) => {
   }
 
   if (!handled) {
-    await ctx.reply(
+    const msg = await ctx.reply(
       `Format pesan tidak sesuai alur. Silakan masukkan data yang diminta atau tekan tombol Batal.`,
       { parse_mode: 'HTML', ...cancelButton() }
     );
+    session.lastMessageId = msg.message_id;
   }
 });
 

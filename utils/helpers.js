@@ -1,4 +1,51 @@
-const config = require('../config.json');
+const fs = require('fs');
+const path = require('path');
+
+const configPath = path.join(__dirname, '../config.json');
+
+function getConfig() {
+  return JSON.parse(fs.readFileSync(configPath, 'utf8'));
+}
+
+function saveConfig(config) {
+  fs.writeFileSync(configPath, JSON.stringify(config, null, 2));
+}
+
+function isOwner(userId) {
+  const config = getConfig();
+  return config.OWNER_ID === userId;
+}
+
+function isWhitelisted(userId) {
+  const config = getConfig();
+  return config.WHITELIST.includes(userId) || isOwner(userId);
+}
+
+function addWhitelist(userId) {
+  const config = getConfig();
+  if (!config.WHITELIST.includes(userId)) {
+    config.WHITELIST.push(userId);
+    saveConfig(config);
+    return true;
+  }
+  return false;
+}
+
+function removeWhitelist(userId) {
+  const config = getConfig();
+  const index = config.WHITELIST.indexOf(userId);
+  if (index !== -1) {
+    config.WHITELIST.splice(index, 1);
+    saveConfig(config);
+    return true;
+  }
+  return false;
+}
+
+function getWhitelist() {
+  const config = getConfig();
+  return config.WHITELIST;
+}
 
 function escapeHtml(str) {
   if (!str) return '';
@@ -11,6 +58,7 @@ function escapeHtml(str) {
 }
 
 async function fetchApi(endpoint, params = {}, retries = 3) {
+  const config = getConfig();
   const baseUrl = (config.API_BASE_URL || 'https://skyp.isaaw.web.id').replace(/\/+$/, '');
   const url = new URL(endpoint, baseUrl);
 
@@ -90,4 +138,4 @@ function getErrorMessage(status, data) {
   }
 }
 
-module.exports = { escapeHtml, fetchApi, getErrorMessage };
+module.exports = { getConfig, saveConfig, isOwner, isWhitelisted, addWhitelist, removeWhitelist, getWhitelist, escapeHtml, fetchApi, getErrorMessage };

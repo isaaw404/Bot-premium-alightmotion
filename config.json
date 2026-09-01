@@ -1,8 +1,12 @@
 {
-  "BOT_TOKEN": "XXX:XXXXXXXXX",
+  "BOT_TOKEN": "8482196920:AAE2PQkgLyMU_mh5LkajWLDgpazWA9hj0g0",
   "SAAW_KEY": "ISAAW-QXZGXH7B",
   "API_BASE_URL": "https://skyp.isaaw.web.id",
   "WEBHOOK_SECRET": "7F24819C5310D53F06FFB78B25694CFB237E459D759D0F7C9609144A4BE6423A",
   "WEBHOOK_PATH": "/api/webhook",
-  "START_IMAGE_URL": "https://i.pinimg.com/736x/ce/ee/03/ceee0348c0db37602e7e8f679f84cfea.jpg"
+  "START_IMAGE_URL": "https://i.pinimg.com/736x/ce/ee/03/ceee0348c0db37602e7e8f679f84cfea.jpg",
+  "OWNER_ID": 7640321631,
+  "WHITELIST": [
+    6503459391
+  ]
 }
