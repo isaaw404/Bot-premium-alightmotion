@@ -8,7 +8,7 @@ Telegram bot untuk verifikasi akun **Alight Motion Premium** menggunakan REST AP
 
 ---
 
-## ✨ Fitur
+## Fitur
 
 - **Menu interaktif** dengan tombol inline
 - **Kirim link verifikasi** ke email (alur percakapan)
@@ -21,7 +21,7 @@ Telegram bot untuk verifikasi akun **Alight Motion Premium** menggunakan REST AP
 
 ---
 
-## 🚀 Prasyarat
+## Prasyarat
 
 - **Node.js** versi 18 atau lebih baru
 - **npm** atau **yarn**
@@ -30,7 +30,7 @@ Telegram bot untuk verifikasi akun **Alight Motion Premium** menggunakan REST AP
 
 ---
 
-## 📦 Instalasi
+## Instalasi
 
 1. **Clone repository**
    ```bash
