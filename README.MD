@@ -19,7 +19,7 @@
 * Webhook Secret
 * Polling untuk lokal
 * Webhook untuk Vercel
-* Support Windows, Linux, macOS, Termux & VPS
+* Support Windows, Linux, macOS, Termux, Pterodactyl & VPS
 
 ---
 
