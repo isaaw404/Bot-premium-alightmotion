@@ -36,5 +36,5 @@ Telegram bot untuk verifikasi akun **Alight Motion Premium 1 Tahun** menggunakan
 
 1. **Clone repository**
    ```bash
-   git clone https://github.com/username/isaaw-premium-bot.git
-   cd isaaw-premium-bot
+   git https://github.com/isaaw404/Bot-premium-alightmotion.git
+   cd Bot-premium-alightmotion
