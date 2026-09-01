@@ -1,4 +1,4 @@
-# Bot Telegram Alightmotion Premium
+# 𝙸𝚜𝚊𝚊𝚠 ダッシュボード
 
 Telegram bot untuk verifikasi akun **Alight Motion Premium** menggunakan REST API [iSaaw Quality Project](https://skyp.isaaw.web.id). Bot ini mendukung interaksi berbasis tombol dan alur percakapan yang ramah pengguna.
 
