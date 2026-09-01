@@ -2,7 +2,7 @@ const { Markup } = require('telegraf');
 
 function mainMenu() {
   return Markup.inlineKeyboard([
-    [Markup.button.callback('Kirim Link Verifikasi', 'sendlink')],
+    [Markup.button.callback('Request Premium AM', 'sendlink')],
     [Markup.button.callback('Cek Status API', 'status')],
     [Markup.button.callback('Bantuan', 'help')]
   ]);

@@ -41,7 +41,7 @@ async function handleHelp(ctx) {
   const text = `<pre><code>[ PANDUAN PENGGUNAAN ]</code></pre>\n\n` +
     `<blockquote>Gunakan fitur sesuai kebutuhan. Pastikan data yang dikirimkan sudah benar.</blockquote>\n\n` +
     `• /status - Memeriksa status dan kuota API Key (hanya owner)\n` +
-    `• Kirim Link - Menerima link verifikasi via email\n` +
+    `• Request Premium - Menerima link verifikasi via email\n` +
     `• /wlid - Kelola daftar akses (owner only)\n\n` +
     `Gunakan tombol navigasi di bawah untuk kembali ke menu utama.`;
   await ctx.reply(text, { parse_mode: 'HTML', ...backMenu() });
