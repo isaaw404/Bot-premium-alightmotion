@@ -231,4 +231,4 @@ Premium Berhasil Diproses
 
 MIT License
 
-© 2026 𝙸𝚜𝚊𝚊𝚠 ダッシュボード
+© 2026 𝙸𝚜𝚊𝚊𝚠
