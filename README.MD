@@ -10,14 +10,16 @@ Telegram bot untuk verifikasi akun **Alight Motion Premium 1 Tahun** menggunakan
 
 ## Fitur
 
-- **Menu interaktif** dengan tombol inline
-- **Kirim link verifikasi** ke email (alur percakapan)
-- **Verifikasi premium** otomatis setelah link diterima
-- **Cek status API key** (paket, kuota harian, masa berlaku)
-- **Bantuan** dan panduan penggunaan
-- **Session** per pengguna untuk menjaga alur verifikasi
-- **Rate limiting & retry** otomatis saat API overload
-- **Deduplikasi update** (mencegah proses ganda)
+- Menu interaktif dengan tombol inline
+- Kirim link verifikasi ke email (alur percakapan)
+- Verifikasi premium otomatis setelah link diterima
+- Cek status API key (paket, kuota harian, masa berlaku)
+- Bantuan dan panduan penggunaan
+- Session per pengguna untuk menjaga alur verifikasi
+- Rate limiting & retry otomatis saat API overload
+- Deduplikasi update (mencegah proses ganda)
+- Sistem whitelist untuk mengatur akses pengguna
+- Owner-only untuk fitur status API key
 
 ---
 
