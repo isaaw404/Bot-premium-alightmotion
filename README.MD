@@ -1,6 +1,6 @@
 # 𝙸𝚜𝚊𝚊𝚠 ダッシュボード
 
-Telegram bot untuk verifikasi akun **Alight Motion Premium** menggunakan REST API [iSaaw Quality Project](https://skyp.isaaw.web.id). Bot ini mendukung interaksi berbasis tombol dan alur percakapan yang ramah pengguna.
+Telegram bot untuk verifikasi akun **Alight Motion Premium 1 Tahun** menggunakan REST API [iSaaw Quality Project](https://skyp.isaaw.web.id).
 
 ![Node.js](https://img.shields.io/badge/Node.js-18+-green?style=flat&logo=node.js)
 ![Telegraf](https://img.shields.io/badge/Telegraf-4.16+-blue?style=flat&logo=telegram)
