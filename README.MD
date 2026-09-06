@@ -49,6 +49,8 @@ Buat file config.json di root direktori proyek:
   "WHITELIST": [987654321]
 }
 
+```
+
 Catatan WEBHOOK_SECRET:
 Untuk membuat string acak via PowerShell:
 -join (1..32 | ForEach-Object { '{0:X2}' -f (Get-Random -Minimum 0 -Maximum 256) })
