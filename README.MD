@@ -67,7 +67,7 @@ Untuk membuat string acak via PowerShell:
 
 npm start
 
-```bash
+```
 
 ---
 
