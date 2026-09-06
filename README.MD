@@ -4,7 +4,7 @@ Bot Telegram untuk layanan Request Premium AM dan pengecekan status API. Dilengk
 
 ---
 
-## ⚡ Fitur Utama
+## Fitur Utama
 
 - Start Menu — Menu interaktif dengan informasi pengguna dan tombol navigasi.
 - Request Premium — Alur otomatis input email, verifikasi link, dan aktivasi.
@@ -17,7 +17,7 @@ Bot Telegram untuk layanan Request Premium AM dan pengecekan status API. Dilengk
 
 ---
 
-## 📦 Prasyarat
+## Prasyarat
 
 - Node.js v18+
 - Akun Vercel (https://vercel.com) (untuk mode webhook/production)
@@ -26,10 +26,10 @@ Bot Telegram untuk layanan Request Premium AM dan pengecekan status API. Dilengk
 
 ---
 
-## 🛠️ Instalasi & Penggunaan Lokal
+## Instalasi & Penggunaan Lokal
 
 ### 1. Clone & Install
-git clone https://github.com/username/isaaw-premium-bot.git
+git clone https://github.com/isaaw404/Bot-premium-alightmotion.git
 cd isaaw-premium-bot
 npm install
 
@@ -56,7 +56,7 @@ npm start
 
 ---
 
-## 🚀 Deploy ke Vercel
+## Deploy ke Vercel
 
 1. Push repository ini ke akun GitHub Anda.
 2. Import repository di dashboard Vercel.
