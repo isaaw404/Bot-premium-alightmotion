@@ -1,65 +1,64 @@
 # Isaaw Premium Bot
 
-Bot Telegram untuk layanan **Request Premium AM** dan pengecekan status API, dilengkapi dengan sistem whitelist, owner-only commands, serta mekanisme **auto-registration webhook** saat dideploy ke Vercel Production.
-
-## Fitur Utama
-
-- ✅ **Start Menu** dengan informasi pengguna dan tombol navigasi.
-- ✅ **Request Premium** – kirim email, verifikasi link, dan aktifkan premium.
-- ✅ **Cek Status API** – lihat kuota, paket, masa berlaku (khusus owner).
-- ✅ **Manajemen Whitelist** – tambah/hapus/lihat daftar ID yang diizinkan (khusus owner).
-- ✅ **Session per user** – alur input email dan link.
-- ✅ **Auto Webhook** – saat deploy ke Vercel Production, webhook Telegram otomatis terdaftar tanpa perintah manual.
-- ✅ **Mode Polling** – untuk menjalankan bot secara lokal.
-- ✅ **Keamanan** – verifikasi `X-Telegram-Bot-Api-Secret-Token`, response generik untuk endpoint publik, dan tidak ada bocoran informasi internal.
+Bot Telegram untuk layanan Request Premium AM dan pengecekan status API. Dilengkapi sistem whitelist, owner-only commands, serta auto-registration webhook saat dideploy ke Vercel Production.
 
 ---
 
-## Prasyarat
+## ⚡ Fitur Utama
 
-- Node.js **v18+**
-- Akun [Vercel](https://vercel.com) (untuk deployment webhook)
-- Bot Telegram (dapatkan token dari [@BotFather](https://t.me/botfather))
-- API Key dari layanan backend (dalam konfigurasi `SAAW_KEY`)
-
----
-
-## Instalasi & Konfigurasi Lokal
-
-1. **Clone repository**
-
-   ```bash
-   git clone https://github.com/username/isaaw-premium-bot.git
-   cd isaaw-premium-bot
+- Start Menu — Menu interaktif dengan informasi pengguna dan tombol navigasi.
+- Request Premium — Alur otomatis input email, verifikasi link, dan aktivasi.
+- Cek Status API — Pemantauan kuota, jenis paket, dan masa berlaku (Khusus Owner).
+- Manajemen Whitelist — Kontrol akses tambah, hapus, dan lihat ID terdaftar (Khusus Owner).
+- Session Management — Menjaga status interaksi per user selama proses request.
+- Auto Webhook — Pendaftaran webhook Telegram otomatis saat deploy ke Vercel.
+- Mode Polling — Opsi menjalankan bot secara lokal untuk kebutuhan pengujian.
+- Keamanan — Proteksi header X-Telegram-Bot-Api-Secret-Token dan respon generik pada endpoint publik.
 
 ---
 
-2. **Install dependencies**
+## 📦 Prasyarat
 
-```bash
+- Node.js v18+
+- Akun Vercel (https://vercel.com) (untuk mode webhook/production)
+- Bot Token dari @BotFather (https://t.me/botfather)
+- API Key backend (SAAW_KEY)
+
+---
+
+## 🛠️ Instalasi & Penggunaan Lokal
+
+### 1. Clone & Install
+git clone https://github.com/username/isaaw-premium-bot.git
+cd isaaw-premium-bot
 npm install
 
----
+### 2. Konfigurasi (config.json)
+Buat file config.json di root direktori proyek:
 
-3. **Buat file config.json (gunakan contoh di bawah)**
-
-```bash
 {
-  "BOT_TOKEN": "TOKEN BOT DAPAT DI t.me/@BotFather",
-  "SAAW_KEY": "APIKEY DARI WEB",
+  "BOT_TOKEN": "YOUR_TELEGRAM_BOT_TOKEN",
+  "SAAW_KEY": "YOUR_BACKEND_API_KEY",
   "API_BASE_URL": "https://skyp.isaaw.web.id",
-  "WEBHOOK_SECRET": "BIKINNYA DI COMMAND", //-join (1..32 | ForEach-Object { '{0:X2}' -f (Get-Random -Minimum 0 -Maximum 256) })
+  "WEBHOOK_SECRET": "YOUR_RANDOM_SECRET_KEY",
   "WEBHOOK_PATH": "/api/webhook",
-  "START_IMAGE_URL": "https://CONTOH.COM/start-image.jpg",
+  "START_IMAGE_URL": "https://example.com/start-image.jpg",
   "OWNER_ID": 1234567890,
   "WHITELIST": [987654321]
 }
 
----
+Catatan WEBHOOK_SECRET:
+Untuk membuat string acak via PowerShell:
+-join (1..32 | ForEach-Object { '{0:X2}' -f (Get-Random -Minimum 0 -Maximum 256) })
 
-3. **Jalankan bot secara lokal (mode polling)**
-
-```bash
+### 3. Jalankan Bot (Mode Polling)
 npm start
 
+---
 
+## 🚀 Deploy ke Vercel
+
+1. Push repository ini ke akun GitHub Anda.
+2. Import repository di dashboard Vercel.
+3. Atur Environment Variables sesuai parameter di config.json.
+4. Deploy. Webhook Telegram akan otomatis terkonfigurasi setelah deployment selesai.
