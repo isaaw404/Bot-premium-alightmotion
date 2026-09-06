@@ -1,4 +1,4 @@
-# Isaaw Premium Bot — Telegram Bot with Auto Webhook (Vercel)
+# Isaaw Premium Bot
 
 Bot Telegram untuk layanan **Request Premium AM** dan pengecekan status API, dilengkapi dengan sistem whitelist, owner-only commands, serta mekanisme **auto-registration webhook** saat dideploy ke Vercel Production.
 
