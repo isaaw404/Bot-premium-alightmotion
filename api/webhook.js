@@ -1,12 +1,11 @@
-const { bot } = require('../bot');
-const config = require('../config.json');
+const { getConfig } = require('../utils/helpers');
 
 module.exports = async (req, res) => {
   if (req.method !== 'POST') {
-    res.setHeader('Allow', ['POST']);
-    return res.status(405).json({ error: 'Method Not Allowed' });
+    return res.status(404).json({ error: 'Not Found' });
   }
 
+  const config = getConfig();
   const secretToken = config.WEBHOOK_SECRET;
   if (secretToken) {
     const headerSecret = req.headers['x-telegram-bot-api-secret-token'];
@@ -18,7 +17,7 @@ module.exports = async (req, res) => {
   try {
     const update = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
     if (update && update.update_id) {
-      await bot.handleUpdate(update);
+      await require('../bot').bot.handleUpdate(update);
     }
     return res.status(200).json({ ok: true });
   } catch (err) {

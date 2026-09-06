@@ -4,7 +4,17 @@ const path = require('path');
 const configPath = path.join(__dirname, '../config.json');
 
 function getConfig() {
-  return JSON.parse(fs.readFileSync(configPath, 'utf8'));
+  const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+  if (process.env.BOT_TOKEN) config.BOT_TOKEN = process.env.BOT_TOKEN;
+  if (process.env.SAAW_KEY) config.SAAW_KEY = process.env.SAAW_KEY;
+  if (process.env.WEBHOOK_SECRET) config.WEBHOOK_SECRET = process.env.WEBHOOK_SECRET;
+  if (process.env.API_BASE_URL) config.API_BASE_URL = process.env.API_BASE_URL;
+  if (process.env.OWNER_ID) config.OWNER_ID = parseInt(process.env.OWNER_ID, 10);
+  if (process.env.WHITELIST) {
+    try { config.WHITELIST = JSON.parse(process.env.WHITELIST); } catch (_) {}
+  }
+  if (process.env.START_IMAGE_URL) config.START_IMAGE_URL = process.env.START_IMAGE_URL;
+  return config;
 }
 
 function saveConfig(config) {
