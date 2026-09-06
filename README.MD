@@ -36,6 +36,8 @@ npm install
 ### 2. Konfigurasi (config.json)
 Buat file config.json di root direktori proyek:
 
+```bash
+
 {
   "BOT_TOKEN": "YOUR_TELEGRAM_BOT_TOKEN",
   "SAAW_KEY": "YOUR_BACKEND_API_KEY",
