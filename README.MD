@@ -32,10 +32,14 @@ Bot Telegram untuk layanan **Request Premium AM** dan pengecekan status API, dil
    git clone https://github.com/username/isaaw-premium-bot.git
    cd isaaw-premium-bot
 
+---
+
 2. **Install dependencies**
 
 ```bash
 npm install
+
+---
 
 3. **Buat file config.json (gunakan contoh di bawah)**
 
@@ -50,6 +54,8 @@ npm install
   "OWNER_ID": 1234567890,
   "WHITELIST": [987654321]
 }
+
+---
 
 3. **Jalankan bot secara lokal (mode polling)**
 
