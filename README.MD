@@ -29,9 +29,14 @@ Bot Telegram untuk layanan Request Premium AM dan pengecekan status API. Dilengk
 ## Instalasi & Penggunaan Lokal
 
 ### 1. Clone & Install
+
+```bash
+
 git clone https://github.com/isaaw404/Bot-premium-alightmotion.git
 cd isaaw-premium-bot
 npm install
+
+```
 
 ### 2. Konfigurasi (config.json)
 Buat file config.json di root direktori proyek:
