@@ -53,10 +53,21 @@ Buat file config.json di root direktori proyek:
 
 Catatan WEBHOOK_SECRET:
 Untuk membuat string acak via PowerShell:
+
+```bash
+
+
 -join (1..32 | ForEach-Object { '{0:X2}' -f (Get-Random -Minimum 0 -Maximum 256) })
 
+```
+
 ### 3. Jalankan Bot (Mode Polling)
+
+```bash
+
 npm start
+
+```bash
 
 ---
 
